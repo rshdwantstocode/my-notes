@@ -1,0 +1,11 @@
+main {
+  display: flex;
+  justify-content: flex-start;
+  padding: 3rem;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.add-note {
+  float: right;
+}

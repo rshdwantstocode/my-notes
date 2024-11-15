@@ -3,11 +3,10 @@
 }
 
 <main>
-  <!-- <button class="add-note">ADD</button> -->
-  <div>
-    <p>Notes Id</p>
-    <h2>Title of the note</h2>
-    <p>Content of the note</p>
-  </div>
-  <button (click)="onAddNote()">ADD</button>
+  @for (note of allNotes; track note.id) {
+  <app-note [note]="note" />
+  }
+  <p class="button-add">
+    <button (click)="onAddNote()">ADD</button>
+  </p>
 </main>

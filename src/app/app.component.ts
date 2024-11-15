@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { NotesComponent } from './notes/notes.component';
+import { NoteService } from './notes/notes.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,4 @@ import { NotesComponent } from './notes/notes.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'my-notes';
-}
+export class AppComponent {}

@@ -3,17 +3,17 @@ main {
   justify-content: flex-start;
   padding: 3rem;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 2rem;
 }
 
-.note-div {
+/* .note-div {
   color: #e8bcb9;
   height: 16rem;
   width: 16rem;
   padding: 10px;
   background-color: #4b4376;
   border-radius: 10px;
-}
+} */
 
 .button-add {
   display: flex;

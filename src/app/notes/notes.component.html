@@ -1,7 +1,6 @@
 @if (isAddNote) {
 <app-add-notes (cancel)="onCancelNote()" />
 }
-
 <main>
   @for (note of allNotes; track note.id) {
   <app-note [note]="note" />

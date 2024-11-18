@@ -3,6 +3,7 @@ import { AddNotesComponent } from './add-notes/add-notes.component';
 import { Note } from './notes.model';
 import { NoteComponent } from './note/note.component';
 import { NoteService } from './notes.service';
+import { ShowNoteComponent } from '../show-note/show-note.component';
 
 @Component({
   selector: 'app-notes',

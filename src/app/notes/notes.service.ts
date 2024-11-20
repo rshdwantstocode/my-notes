@@ -33,4 +33,8 @@ export class NoteService {
       content: noteData.content,
     });
   }
+
+  removeNote(id: string) {
+    this.dummyNote = this.dummyNote.filter((note) => note.id !== id);
+  }
 }

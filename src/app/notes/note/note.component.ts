@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Note } from '../notes.model';
 import { ShowNoteComponent } from '../../show-note/show-note.component';
+import { NoteService } from '../notes.service';
 
 @Component({
   selector: 'app-note',
@@ -12,6 +13,8 @@ import { ShowNoteComponent } from '../../show-note/show-note.component';
 export class NoteComponent {
   @Input({ required: true }) note!: Note;
 
+  constructor(private noteService: NoteService) {}
+
   onClick(noteID: string) {
     console.log(noteID);
   }
@@ -19,5 +22,12 @@ export class NoteComponent {
 
   onshowNote() {
     this.isShowNote = true;
+  }
+  ondontShowNote() {
+    this.isShowNote = false;
+  }
+
+  onDelete() {
+    this.noteService.removeNote(this.note.id);
   }
 }

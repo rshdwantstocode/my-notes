@@ -1,10 +1,11 @@
 <!-- <button class="add-note">ADD</button> -->
 @if (isShowNote) {
-<app-show-note />
+<app-show-note (cancel)="ondontShowNote()" />
 }
 
+<button (click)="onDelete()">Delete</button>
 <div class="note-div" (click)="onshowNote()">
-  <button>Delete</button>
+  <!-- <button>Delete</button> -->
   <input type="hidden" value="{{ note.id }}" />
   <h2>{{ note.title }}</h2>
   <p>{{ note.content }}</p>

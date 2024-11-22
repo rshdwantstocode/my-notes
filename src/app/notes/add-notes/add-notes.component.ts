@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { NoteService } from '../notes.service';
 import { FormsModule } from '@angular/forms';
+import { ControlComponent } from '../../shared/control/control.component';
 
 @Component({
   selector: 'app-add-notes',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, ControlComponent],
   templateUrl: './add-notes.component.html',
   styleUrl: './add-notes.component.css',
 })

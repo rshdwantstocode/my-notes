@@ -1,6 +1,6 @@
 <!-- <button class="add-note">ADD</button> -->
 @if (isShowNote) {
-<app-show-note (cancel)="ondontShowNote()" />
+<app-show-note (cancel)="ondontShowNote()" [note]="" />
 }
 
 <button (click)="onDelete()">Delete</button>

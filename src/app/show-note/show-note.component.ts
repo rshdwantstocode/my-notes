@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Note } from '../notes/notes.model';
 
 @Component({
   selector: 'app-show-note',
@@ -8,6 +9,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrl: './show-note.component.css',
 })
 export class ShowNoteComponent {
+  @Input({ required: true }) note?: Note;
   @Output() cancel = new EventEmitter<void>();
 
   onCancel() {

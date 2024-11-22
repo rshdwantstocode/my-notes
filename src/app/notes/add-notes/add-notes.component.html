@@ -2,18 +2,19 @@
 <dialog open>
   <form (ngSubmit)="onSubmit()">
     <input type="hidden" name="id" />
-    <div>
-      <label for="title">Title: </label>
+
+    <app-control label="Title: ">
       <input type="text" name="title" [(ngModel)]="enteredTitle" />
-    </div>
-    <div>
-      <label for="content">Note:</label>
+    </app-control>
+
+    <app-control label="Note: ">
+      <!-- <label for="content">Note:</label> -->
       <textarea
         type="text"
         name="content"
         [(ngModel)]="enteredContent"
       ></textarea>
-    </div>
+    </app-control>
 
     <div class="add-buttons">
       <button type="submit">Submit</button>

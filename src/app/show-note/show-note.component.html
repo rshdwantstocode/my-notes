@@ -1,15 +1,22 @@
 <div class="backdrop" (click)="onCancel()"></div>
 <dialog open>
-  <form>
-    <input type="hidden" name="id" />
-    <div>
-      <label for="title">Title: </label>
-      <input type="text" name="title" />
-    </div>
-    <div>
-      <label for="content">Note:</label>
-      <textarea type="text" name="content"></textarea>
-    </div>
+  <form (ngSubmit)="onEdit(id.value, input.value, textarea.value)">
+    <input type="hidden" name="id" [value]="note?.id" #id />
+
+    <app-control label="Title: ">
+      <!-- <label for="title">Title: </label> -->
+      <input type="text" name="title" [value]="note?.title" #input />
+    </app-control>
+
+    <app-control label="Note: ">
+      <!-- <label for="content">Note:</label> -->
+      <textarea
+        type="text"
+        name="content"
+        [value]="note?.content"
+        #textarea
+      ></textarea>
+    </app-control>
 
     <div class="add-buttons">
       <button type="submit">Submit</button>

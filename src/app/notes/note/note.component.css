@@ -9,4 +9,8 @@
 
 button {
   float: right;
+  border: none;
+  background-color: #e8bcb9;
+  cursor: pointer;
+  border-radius: 5px;
 }

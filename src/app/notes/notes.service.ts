@@ -25,6 +25,14 @@ export class NoteService {
     return this.dummyNote;
   }
 
+  constructor() {
+    const notes = localStorage.getItem('notes');
+
+    if (notes) {
+      this.dummyNote = JSON.parse(notes);
+    }
+  }
+
   addNote(noteData: addNote) {
     let noteID = this.dummyNote.length + 1;
     this.dummyNote.push({
@@ -32,9 +40,25 @@ export class NoteService {
       title: noteData.title,
       content: noteData.content,
     });
+    this.saveNotes();
+  }
+
+  editNote(noteData: Note) {
+    this.dummyNote.forEach((note) => {
+      if (note.id === noteData.id) {
+        note.title = noteData.title;
+        note.content = noteData.content;
+      }
+    });
+    this.saveNotes();
   }
 
   removeNote(id: string) {
     this.dummyNote = this.dummyNote.filter((note) => note.id !== id);
+    this.saveNotes();
+  }
+
+  saveNotes() {
+    localStorage.setItem('notes', JSON.stringify(this.dummyNote));
   }
 }

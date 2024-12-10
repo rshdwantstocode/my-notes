@@ -2,11 +2,12 @@ import { Component, Input } from '@angular/core';
 import { Note } from '../notes.model';
 import { ShowNoteComponent } from '../../show-note/show-note.component';
 import { NoteService } from '../notes.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-note',
   standalone: true,
-  imports: [ShowNoteComponent],
+  imports: [ShowNoteComponent, CommonModule],
   templateUrl: './note.component.html',
   styleUrl: './note.component.css',
 })

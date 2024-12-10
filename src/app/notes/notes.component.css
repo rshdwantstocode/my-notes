@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
 main {
   display: flex;
   justify-content: flex-start;
@@ -5,15 +7,6 @@ main {
   flex-wrap: wrap;
   gap: 2rem;
 }
-
-/* .note-div {
-  color: #e8bcb9;
-  height: 16rem;
-  width: 16rem;
-  padding: 10px;
-  background-color: #4b4376;
-  border-radius: 10px;
-} */
 
 .button-add {
   display: flex;
@@ -28,4 +21,6 @@ button {
   height: 8rem;
   width: 8rem;
   cursor: pointer;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
 }

@@ -27,4 +27,8 @@ export class NotesComponent {
   onCancelNote() {
     this.isAddNote = false;
   }
+
+  test() {
+    console.log('halu');
+  }
 }
